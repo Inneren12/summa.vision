@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "slug": "tech-smartphone-sales-2024",
+    "title": "Global Smartphone Sales by Brand, 2024",
+    "section": "tech",
+    "tags": [
+      "smartphones",
+      "handsets"
+    ],
+    "publishedAt": "2024-11-10",
+    "kind": "BAR",
+    "sources": [
+      "Canalys (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Units (M)",
+        "points": [
+          {
+            "x": "Apple",
+            "y": 235
+          },
+          {
+            "x": "Samsung",
+            "y": 260
+          },
+          {
+            "x": "Xiaomi",
+            "y": 160
+          },
+          {
+            "x": "Oppo",
+            "y": 110
+          },
+          {
+            "x": "Transsion",
+            "y": 95
+          }
+        ]
+      }
+    ],
+    "unit": "Million units"
+  }
+}

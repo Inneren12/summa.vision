@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "slug": "demographics-population-growth-2024",
+    "title": "Population Growth by Region, 2024",
+    "section": "demographics",
+    "tags": [
+      "population",
+      "growth"
+    ],
+    "publishedAt": "2024-08-15",
+    "kind": "BAR"
+  },
+  "data": {
+    "series": [
+      {
+        "id": "% YoY",
+        "points": [
+          {
+            "x": "Africa",
+            "y": 2.3
+          },
+          {
+            "x": "Asia",
+            "y": 0.7
+          },
+          {
+            "x": "Europe",
+            "y": -0.1
+          },
+          {
+            "x": "LatAm",
+            "y": 0.9
+          },
+          {
+            "x": "Oceania",
+            "y": 1.2
+          },
+          {
+            "x": "N. America",
+            "y": 0.6
+          }
+        ]
+      }
+    ],
+    "unit": "%"
+  }
+}

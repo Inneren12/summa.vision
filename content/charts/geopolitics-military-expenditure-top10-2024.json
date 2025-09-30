@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "slug": "geopolitics-military-expenditure-top10-2024",
+    "title": "Top 10 Countries by Military Expenditure, 2024",
+    "section": "geopolitics",
+    "tags": [
+      "military",
+      "spending",
+      "defense"
+    ],
+    "publishedAt": "2025-02-01",
+    "kind": "BAR",
+    "sources": [
+      "SIPRI (estimates)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "USD (B)",
+        "points": [
+          {
+            "x": "USA",
+            "y": 860
+          },
+          {
+            "x": "China",
+            "y": 300
+          },
+          {
+            "x": "Russia",
+            "y": 110
+          },
+          {
+            "x": "India",
+            "y": 90
+          },
+          {
+            "x": "Saudi",
+            "y": 80
+          },
+          {
+            "x": "UK",
+            "y": 75
+          },
+          {
+            "x": "Germany",
+            "y": 70
+          },
+          {
+            "x": "France",
+            "y": 65
+          },
+          {
+            "x": "Japan",
+            "y": 55
+          },
+          {
+            "x": "South Korea",
+            "y": 50
+          }
+        ]
+      }
+    ],
+    "unit": "USD billions"
+  }
+}

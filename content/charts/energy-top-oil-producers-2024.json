@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "slug": "energy-top-oil-producers-2024",
+    "title": "Top Oil Producers, 2024",
+    "section": "energy",
+    "tags": [
+      "oil",
+      "energy"
+    ],
+    "publishedAt": "2024-10-01",
+    "kind": "TREEMAP",
+    "sources": [
+      "IEA (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "kb/d",
+        "points": [
+          {
+            "x": "USA",
+            "y": 13000
+          },
+          {
+            "x": "Saudi Arabia",
+            "y": 9800
+          },
+          {
+            "x": "Russia",
+            "y": 10400
+          },
+          {
+            "x": "Canada",
+            "y": 5200
+          },
+          {
+            "x": "Iraq",
+            "y": 4700
+          },
+          {
+            "x": "UAE",
+            "y": 4300
+          }
+        ]
+      }
+    ],
+    "unit": "kb/d"
+  }
+}

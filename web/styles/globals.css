@@ -1,0 +1,22 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0b10;
+  --fg: #f4f6fb;
+  --muted: #9aa4b2;
+}
+
+[data-theme="light"] {
+  --bg: #ffffff;
+  --fg: #0b0b10;
+  --muted: #6b7280;
+}
+
+html, body, #__next { height: 100%; }
+body { background: var(--bg); color: var(--fg); }
+a { text-decoration: none; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
+.card { border: 1px solid rgba(127,127,127,0.2); border-radius: .75rem; padding: 1rem; background: rgba(127,127,127,0.05); }

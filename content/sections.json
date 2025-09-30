@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "economy",
+    "title": "Economy",
+    "order": 1
+  },
+  {
+    "slug": "markets",
+    "title": "Markets",
+    "order": 2
+  },
+  {
+    "slug": "tech",
+    "title": "Technology",
+    "order": 3
+  },
+  {
+    "slug": "energy",
+    "title": "Energy",
+    "order": 4
+  },
+  {
+    "slug": "demographics",
+    "title": "Demographics",
+    "order": 5
+  },
+  {
+    "slug": "geopolitics",
+    "title": "Geopolitics",
+    "order": 6
+  }
+]

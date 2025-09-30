@@ -1,0 +1,25 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+.next/
+out/
+dist/
+.cache/
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+*.swp
+*.swo
+
+# Env files
+.env
+.env.*

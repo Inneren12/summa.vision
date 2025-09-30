@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "slug": "economy-gdp-top10-2024",
+    "title": "Top 10 Economies by GDP (Nominal), 2024",
+    "section": "economy",
+    "tags": [
+      "gdp",
+      "economy",
+      "top10"
+    ],
+    "publishedAt": "2024-12-20",
+    "kind": "TREEMAP",
+    "sources": [
+      "IMF (estimates)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "GDP",
+        "points": [
+          {
+            "x": "USA",
+            "y": 28000000
+          },
+          {
+            "x": "China",
+            "y": 17000000
+          },
+          {
+            "x": "Japan",
+            "y": 4000000
+          },
+          {
+            "x": "Germany",
+            "y": 4500000
+          },
+          {
+            "x": "India",
+            "y": 3700000
+          },
+          {
+            "x": "UK",
+            "y": 3300000
+          },
+          {
+            "x": "France",
+            "y": 3200000
+          },
+          {
+            "x": "Italy",
+            "y": 2100000
+          },
+          {
+            "x": "Canada",
+            "y": 2200000
+          },
+          {
+            "x": "Brazil",
+            "y": 2100000
+          }
+        ]
+      }
+    ],
+    "unit": "USD (millions)"
+  }
+}
