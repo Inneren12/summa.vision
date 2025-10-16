@@ -8,7 +8,25 @@ export default function SiteHeader() {
     <header className="border-b">
       <div className="container py-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          <Link href="/" className="text-xl font-semibold">summa.vision</Link>
+          <Link href="/" className="site-logo" aria-label="summa.vision — home">
+            <img
+              src="/logo-light.png"
+              width={180}
+              height={36}
+              alt="summa.vision"
+              className="logo-light"
+              loading="eager"
+            />
+            <img
+              src="/logo-dark.png"
+              width={180}
+              height={36}
+              alt=""
+              aria-hidden="true"
+              className="logo-dark"
+              loading="eager"
+            />
+          </Link>
           <nav className="hidden md:flex items-center gap-4 text-sm opacity-90">
             <Link href="/">Home</Link>
             <Link href="/search">Search</Link>

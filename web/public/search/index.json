@@ -1,93 +1,20 @@
 [
   {
-    "id": "economy-gdp-top10-2024",
-    "slug": "economy-gdp-top10-2024",
-    "title": "Top 10 Economies by GDP (Nominal), 2024",
-    "section": "economy",
+    "id": "demographics-median-age-2024",
+    "slug": "demographics-median-age-2024",
+    "title": "Median Age by Region, 2024",
+    "section": "demographics",
     "tags": [
-      "gdp",
-      "economy",
-      "top10"
-    ],
-    "kind": "TREEMAP",
-    "publishedAt": 1734652800000,
-    "tokens": [
-      "nominal",
-      "2024",
-      "economy",
-      "10",
-      "top",
-      "economies",
-      "top10",
-      "gdp",
-      "by"
-    ]
-  },
-  {
-    "id": "markets-sp500-vs-nasdaq-2020-2024",
-    "slug": "markets-sp500-vs-nasdaq-2020-2024",
-    "title": "S&P 500 vs Nasdaq Composite (Index, 2020\u20132024)",
-    "section": "markets",
-    "tags": [
-      "sp500",
-      "nasdaq",
-      "indices"
-    ],
-    "kind": "LINE",
-    "publishedAt": 1736035200000,
-    "tokens": [
-      "500",
-      "2024",
-      "nasdaq",
-      "vs",
-      "composite",
-      "2020",
-      "indices",
-      "index",
-      "sp500",
-      "markets"
-    ]
-  },
-  {
-    "id": "tech-smartphone-sales-2024",
-    "slug": "tech-smartphone-sales-2024",
-    "title": "Global Smartphone Sales by Brand, 2024",
-    "section": "tech",
-    "tags": [
-      "smartphones",
-      "handsets"
+      "median age"
     ],
     "kind": "BAR",
-    "publishedAt": 1731196800000,
+    "publishedAt": 1725926400000,
     "tokens": [
-      "smartphones",
-      "smartphone",
+      "median",
+      "age",
+      "region",
       "2024",
-      "global",
-      "tech",
-      "sales",
-      "handsets",
-      "brand",
-      "by"
-    ]
-  },
-  {
-    "id": "energy-top-oil-producers-2024",
-    "slug": "energy-top-oil-producers-2024",
-    "title": "Top Oil Producers, 2024",
-    "section": "energy",
-    "tags": [
-      "oil",
-      "energy"
-    ],
-    "kind": "TREEMAP",
-    "publishedAt": 1727740800000,
-    "tokens": [
-      "2024",
-      "oil",
-      "top",
-      "energy",
-      "producers"
+      "demographics"
     ]
   },
   {
@@ -102,12 +29,160 @@
     "kind": "BAR",
     "publishedAt": 1723680000000,
     "tokens": [
-      "region",
       "population",
-      "2024",
-      "demographics",
       "growth",
-      "by"
+      "region",
+      "2024",
+      "demographics"
+    ]
+  },
+  {
+    "id": "demographics-urbanization-2010-2024",
+    "slug": "demographics-urbanization-2010-2024",
+    "title": "Urbanization Rate, 2010–2024",
+    "section": "demographics",
+    "tags": [
+      "urbanization"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1729555200000,
+    "tokens": [
+      "urbanization",
+      "rate",
+      "2010",
+      "2024",
+      "demographics"
+    ]
+  },
+  {
+    "id": "economy-gdp-top10-2024",
+    "slug": "economy-gdp-top10-2024",
+    "title": "Top 10 Economies by GDP (Nominal), 2024",
+    "section": "economy",
+    "tags": [
+      "gdp",
+      "economy",
+      "top10"
+    ],
+    "kind": "TREEMAP",
+    "publishedAt": 1734652800000,
+    "tokens": [
+      "top",
+      "10",
+      "economies",
+      "gdp",
+      "nominal",
+      "2024",
+      "economy",
+      "top10",
+      "gross",
+      "domestic",
+      "product"
+    ]
+  },
+  {
+    "id": "economy-inflation-2019-2024",
+    "slug": "economy-inflation-2019-2024",
+    "title": "Inflation Rate by Year (Select Regions), 2019–2024",
+    "section": "economy",
+    "tags": [
+      "inflation",
+      "cpi"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1736467200000,
+    "tokens": [
+      "inflation",
+      "rate",
+      "year",
+      "select",
+      "regions",
+      "2019",
+      "2024",
+      "cpi",
+      "economy"
+    ]
+  },
+  {
+    "id": "economy-unemployment-2020-2024",
+    "slug": "economy-unemployment-2020-2024",
+    "title": "Unemployment Rate, 2020–2024",
+    "section": "economy",
+    "tags": [
+      "jobs",
+      "labor"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1732924800000,
+    "tokens": [
+      "unemployment",
+      "rate",
+      "2020",
+      "2024",
+      "jobs",
+      "labor",
+      "economy"
+    ]
+  },
+  {
+    "id": "energy-lithium-production-2024",
+    "slug": "energy-lithium-production-2024",
+    "title": "Lithium Production by Country, 2024",
+    "section": "energy",
+    "tags": [
+      "lithium",
+      "mining"
+    ],
+    "kind": "BAR",
+    "publishedAt": 1734480000000,
+    "tokens": [
+      "lithium",
+      "production",
+      "country",
+      "2024",
+      "mining",
+      "energy"
+    ]
+  },
+  {
+    "id": "energy-renewables-share-2019-2024",
+    "slug": "energy-renewables-share-2019-2024",
+    "title": "Renewables Share in Electricity, 2019–2024",
+    "section": "energy",
+    "tags": [
+      "renewables",
+      "electricity"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1733097600000,
+    "tokens": [
+      "renewables",
+      "share",
+      "electricity",
+      "2019",
+      "2024",
+      "energy"
+    ]
+  },
+  {
+    "id": "energy-top-oil-producers-2024",
+    "slug": "energy-top-oil-producers-2024",
+    "title": "Top Oil Producers, 2024",
+    "section": "energy",
+    "tags": [
+      "oil",
+      "energy"
+    ],
+    "kind": "TREEMAP",
+    "publishedAt": 1727740800000,
+    "tokens": [
+      "top",
+      "oil",
+      "producers",
+      "2024",
+      "energy",
+      "petroleum",
+      "crude"
     ]
   },
   {
@@ -123,16 +198,191 @@
     "kind": "BAR",
     "publishedAt": 1738368000000,
     "tokens": [
-      "countries",
-      "2024",
-      "10",
       "top",
+      "10",
+      "countries",
       "military",
       "expenditure",
-      "defense",
+      "2024",
       "spending",
-      "geopolitics",
-      "by"
+      "defense",
+      "geopolitics"
+    ]
+  },
+  {
+    "id": "geopolitics-refugees-2019-2024",
+    "slug": "geopolitics-refugees-2019-2024",
+    "title": "Global Refugee Population, 2019–2024",
+    "section": "geopolitics",
+    "tags": [
+      "refugees",
+      "unhcr"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1733616000000,
+    "tokens": [
+      "global",
+      "refugee",
+      "population",
+      "2019",
+      "2024",
+      "refugees",
+      "unhcr",
+      "geopolitics"
+    ]
+  },
+  {
+    "id": "geopolitics-sanctions-2024",
+    "slug": "geopolitics-sanctions-2024",
+    "title": "Sanctions by Target Economy, 2024",
+    "section": "geopolitics",
+    "tags": [
+      "sanctions"
+    ],
+    "kind": "TREEMAP",
+    "publishedAt": 1731542400000,
+    "tokens": [
+      "sanctions",
+      "target",
+      "economy",
+      "2024",
+      "geopolitics"
+    ]
+  },
+  {
+    "id": "markets-sp500-vs-nasdaq-2020-2024",
+    "slug": "markets-sp500-vs-nasdaq-2020-2024",
+    "title": "S&P 500 vs Nasdaq Composite (Index, 2020–2024)",
+    "section": "markets",
+    "tags": [
+      "sp500",
+      "nasdaq",
+      "indices"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1736035200000,
+    "tokens": [
+      "500",
+      "vs",
+      "nasdaq",
+      "composite",
+      "index",
+      "2020",
+      "2024",
+      "sp500",
+      "indices",
+      "markets"
+    ]
+  },
+  {
+    "id": "markets-top-sectors-2024",
+    "slug": "markets-top-sectors-2024",
+    "title": "Top Performing Sectors, 2024",
+    "section": "markets",
+    "tags": [
+      "sectors",
+      "performance"
+    ],
+    "kind": "BAR",
+    "publishedAt": 1735344000000,
+    "tokens": [
+      "top",
+      "performing",
+      "sectors",
+      "2024",
+      "performance",
+      "markets"
+    ]
+  },
+  {
+    "id": "markets-world-mcap-top10-2024",
+    "slug": "markets-world-mcap-top10-2024",
+    "title": "Top 10 Companies by Market Cap, 2024",
+    "section": "markets",
+    "tags": [
+      "marketcap",
+      "top10"
+    ],
+    "kind": "TREEMAP",
+    "publishedAt": 1731369600000,
+    "tokens": [
+      "top",
+      "10",
+      "companies",
+      "market",
+      "cap",
+      "2024",
+      "marketcap",
+      "top10",
+      "markets"
+    ]
+  },
+  {
+    "id": "tech-ai-investment-2019-2024",
+    "slug": "tech-ai-investment-2019-2024",
+    "title": "Global AI Investment, 2019–2024",
+    "section": "tech",
+    "tags": [
+      "ai",
+      "vc"
+    ],
+    "kind": "LINE",
+    "publishedAt": 1736208000000,
+    "tokens": [
+      "global",
+      "ai",
+      "investment",
+      "2019",
+      "2024",
+      "vc",
+      "tech",
+      "artificial",
+      "intelligence",
+      "ml",
+      "machine",
+      "learning"
+    ]
+  },
+  {
+    "id": "tech-cloud-share-2024",
+    "slug": "tech-cloud-share-2024",
+    "title": "Cloud Market Share, 2024",
+    "section": "tech",
+    "tags": [
+      "cloud",
+      "iaas"
+    ],
+    "kind": "TREEMAP",
+    "publishedAt": 1733356800000,
+    "tokens": [
+      "cloud",
+      "market",
+      "share",
+      "2024",
+      "iaas",
+      "tech"
+    ]
+  },
+  {
+    "id": "tech-smartphone-sales-2024",
+    "slug": "tech-smartphone-sales-2024",
+    "title": "Global Smartphone Sales by Brand, 2024",
+    "section": "tech",
+    "tags": [
+      "smartphones",
+      "handsets"
+    ],
+    "kind": "BAR",
+    "publishedAt": 1731196800000,
+    "tokens": [
+      "global",
+      "smartphone",
+      "sales",
+      "brand",
+      "2024",
+      "smartphones",
+      "handsets",
+      "tech"
     ]
   }
 ]

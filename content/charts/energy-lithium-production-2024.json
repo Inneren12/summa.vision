@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "slug": "energy-lithium-production-2024",
+    "title": "Lithium Production by Country, 2024",
+    "section": "energy",
+    "tags": [
+      "lithium",
+      "mining"
+    ],
+    "publishedAt": "2024-12-18",
+    "kind": "BAR",
+    "sources": [
+      "USGS (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "kt LCE",
+        "points": [
+          {
+            "x": "Australia",
+            "y": 110
+          },
+          {
+            "x": "Chile",
+            "y": 50
+          },
+          {
+            "x": "China",
+            "y": 33
+          },
+          {
+            "x": "Argentina",
+            "y": 40
+          },
+          {
+            "x": "Brazil",
+            "y": 25
+          }
+        ]
+      }
+    ],
+    "unit": "kt LCE"
+  }
+}

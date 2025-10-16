@@ -1,72 +1,71 @@
 {
   "meta": {
-    "slug": "markets-sp500-vs-nasdaq-2020-2024",
-    "title": "S&P 500 vs Nasdaq Composite (Index, 2020–2024)",
-    "section": "markets",
+    "slug": "economy-unemployment-2020-2024",
+    "title": "Unemployment Rate, 2020–2024",
+    "section": "economy",
     "tags": [
-      "sp500",
-      "nasdaq",
-      "indices"
+      "jobs",
+      "labor"
     ],
-    "publishedAt": "2025-01-05",
+    "publishedAt": "2024-11-30",
     "kind": "LINE",
     "sources": [
-      "Stooq (normalized)"
+      "BLS/Eurostat (approx.)"
     ]
   },
   "data": {
     "series": [
       {
-        "id": "S&P 500",
+        "id": "USA",
         "points": [
           {
             "x": 2020,
-            "y": 100
+            "y": 8.1
           },
           {
             "x": 2021,
-            "y": 128
+            "y": 5.3
           },
           {
             "x": 2022,
-            "y": 102
+            "y": 3.6
           },
           {
             "x": 2023,
-            "y": 120
+            "y": 3.7
           },
           {
             "x": 2024,
-            "y": 138
+            "y": 4.0
           }
         ]
       },
       {
-        "id": "Nasdaq",
+        "id": "EU",
         "points": [
           {
             "x": 2020,
-            "y": 100
+            "y": 7.1
           },
           {
             "x": 2021,
-            "y": 135
+            "y": 6.7
           },
           {
             "x": 2022,
-            "y": 95
+            "y": 6.2
           },
           {
             "x": 2023,
-            "y": 130
+            "y": 6.0
           },
           {
             "x": 2024,
-            "y": 155
+            "y": 6.2
           }
         ]
       }
     ],
-    "unit": "Index (2020=100)"
+    "unit": "%"
   }
 }

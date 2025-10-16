@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "slug": "demographics-urbanization-2010-2024",
+    "title": "Urbanization Rate, 2010–2024",
+    "section": "demographics",
+    "tags": [
+      "urbanization"
+    ],
+    "publishedAt": "2024-10-22",
+    "kind": "LINE",
+    "sources": [
+      "UN (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Global",
+        "points": [
+          {
+            "x": 2010,
+            "y": 51
+          },
+          {
+            "x": 2014,
+            "y": 54
+          },
+          {
+            "x": 2018,
+            "y": 56
+          },
+          {
+            "x": 2022,
+            "y": 57
+          },
+          {
+            "x": 2024,
+            "y": 58
+          }
+        ]
+      }
+    ],
+    "unit": "% population"
+  }
+}

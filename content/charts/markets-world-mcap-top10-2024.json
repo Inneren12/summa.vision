@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "slug": "markets-world-mcap-top10-2024",
+    "title": "Top 10 Companies by Market Cap, 2024",
+    "section": "markets",
+    "tags": [
+      "marketcap",
+      "top10"
+    ],
+    "publishedAt": "2024-11-12",
+    "kind": "TREEMAP",
+    "sources": [
+      "Public listings (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Market Cap",
+        "points": [
+          {
+            "x": "Apple",
+            "y": 3000
+          },
+          {
+            "x": "Microsoft",
+            "y": 2900
+          },
+          {
+            "x": "Saudi Aramco",
+            "y": 2100
+          },
+          {
+            "x": "Alphabet",
+            "y": 2000
+          },
+          {
+            "x": "Amazon",
+            "y": 1800
+          },
+          {
+            "x": "Nvidia",
+            "y": 1500
+          },
+          {
+            "x": "Meta",
+            "y": 1200
+          },
+          {
+            "x": "TSMC",
+            "y": 600
+          },
+          {
+            "x": "Berkshire",
+            "y": 800
+          },
+          {
+            "x": "Tesla",
+            "y": 800
+          }
+        ]
+      }
+    ],
+    "unit": "USD billions"
+  }
+}

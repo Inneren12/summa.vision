@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "slug": "tech-ai-investment-2019-2024",
+    "title": "Global AI Investment, 2019–2024",
+    "section": "tech",
+    "tags": [
+      "ai",
+      "vc"
+    ],
+    "publishedAt": "2025-01-07",
+    "kind": "LINE",
+    "sources": [
+      "Industry reports (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Funding ($B)",
+        "points": [
+          {
+            "x": 2019,
+            "y": 45
+          },
+          {
+            "x": 2020,
+            "y": 55
+          },
+          {
+            "x": 2021,
+            "y": 110
+          },
+          {
+            "x": 2022,
+            "y": 95
+          },
+          {
+            "x": 2023,
+            "y": 120
+          },
+          {
+            "x": 2024,
+            "y": 160
+          }
+        ]
+      }
+    ],
+    "unit": "USD billions"
+  }
+}

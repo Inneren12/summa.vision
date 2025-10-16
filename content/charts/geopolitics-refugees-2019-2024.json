@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "slug": "geopolitics-refugees-2019-2024",
+    "title": "Global Refugee Population, 2019–2024",
+    "section": "geopolitics",
+    "tags": [
+      "refugees",
+      "unhcr"
+    ],
+    "publishedAt": "2024-12-08",
+    "kind": "LINE",
+    "sources": [
+      "UNHCR (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "People (M)",
+        "points": [
+          {
+            "x": 2019,
+            "y": 26
+          },
+          {
+            "x": 2020,
+            "y": 27
+          },
+          {
+            "x": 2021,
+            "y": 30
+          },
+          {
+            "x": 2022,
+            "y": 35
+          },
+          {
+            "x": 2023,
+            "y": 40
+          },
+          {
+            "x": 2024,
+            "y": 43
+          }
+        ]
+      }
+    ],
+    "unit": "millions"
+  }
+}

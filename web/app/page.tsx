@@ -1,4 +1,3 @@
-
 import { listAllMetas, repo } from "../lib/content-snapshot";
 import Link from "next/link";
 
@@ -26,10 +25,10 @@ export default async function HomePage() {
         <h2 className="text-2xl font-semibold mb-4">Sections</h2>
         <div className="grid md:grid-cols-3 gap-4">
           {sections.map(s => (
-            <div key={s.slug} className="card">
+            <Link key={s.slug} href={`/sections/${s.slug}`} className="card hover:shadow">
               <div className="font-semibold">{s.title}</div>
               <div className="text-sm opacity-80">/sections/{s.slug}</div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

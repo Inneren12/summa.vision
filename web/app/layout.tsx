@@ -7,7 +7,15 @@ import SiteFooter from "../components/SiteFooter";
 export const metadata = {
   metadataBase: new URL("https://summa.vision"),
   title: { default: "summa.vision", template: "%s — summa.vision" },
-  description: "summa.vision — static charts & sections (MVP)"
+  description: "summa.vision — static charts & sections (MVP)",
+  openGraph: {
+    title: "summa.vision",
+    description: "Static charts & sections",
+    images: ["/logo.png"]
+  },
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 function ThemeScript() {

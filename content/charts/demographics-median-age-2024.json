@@ -1,13 +1,12 @@
 {
   "meta": {
-    "slug": "demographics-population-growth-2024",
-    "title": "Population Growth by Region, 2024",
+    "slug": "demographics-median-age-2024",
+    "title": "Median Age by Region, 2024",
     "section": "demographics",
     "tags": [
-      "population",
-      "growth"
+      "median age"
     ],
-    "publishedAt": "2024-08-15",
+    "publishedAt": "2024-09-10",
     "kind": "BAR",
     "sources": [
       "UN (approx.)"
@@ -16,35 +15,35 @@
   "data": {
     "series": [
       {
-        "id": "% YoY",
+        "id": "years",
         "points": [
           {
             "x": "Africa",
-            "y": 2.3
+            "y": 19
           },
           {
             "x": "Asia",
-            "y": 0.7
+            "y": 32
           },
           {
             "x": "Europe",
-            "y": -0.1
+            "y": 43
           },
           {
             "x": "LatAm",
-            "y": 0.9
+            "y": 31
           },
           {
             "x": "Oceania",
-            "y": 1.2
+            "y": 34
           },
           {
             "x": "N. America",
-            "y": 0.6
+            "y": 38
           }
         ]
       }
     ],
-    "unit": "%"
+    "unit": "years"
   }
 }

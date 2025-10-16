@@ -1,72 +1,79 @@
 {
   "meta": {
-    "slug": "markets-sp500-vs-nasdaq-2020-2024",
-    "title": "S&P 500 vs Nasdaq Composite (Index, 2020–2024)",
-    "section": "markets",
+    "slug": "energy-renewables-share-2019-2024",
+    "title": "Renewables Share in Electricity, 2019–2024",
+    "section": "energy",
     "tags": [
-      "sp500",
-      "nasdaq",
-      "indices"
+      "renewables",
+      "electricity"
     ],
-    "publishedAt": "2025-01-05",
+    "publishedAt": "2024-12-02",
     "kind": "LINE",
     "sources": [
-      "Stooq (normalized)"
+      "IEA (approx.)"
     ]
   },
   "data": {
     "series": [
       {
-        "id": "S&P 500",
+        "id": "EU",
         "points": [
           {
+            "x": 2019,
+            "y": 34
+          },
+          {
             "x": 2020,
-            "y": 100
+            "y": 38
           },
           {
             "x": 2021,
-            "y": 128
+            "y": 37
           },
           {
             "x": 2022,
-            "y": 102
+            "y": 40
           },
           {
             "x": 2023,
-            "y": 120
+            "y": 44
           },
           {
             "x": 2024,
-            "y": 138
+            "y": 46
           }
         ]
       },
       {
-        "id": "Nasdaq",
+        "id": "USA",
         "points": [
           {
+            "x": 2019,
+            "y": 18
+          },
+          {
             "x": 2020,
-            "y": 100
+            "y": 20
           },
           {
             "x": 2021,
-            "y": 135
+            "y": 20
           },
           {
             "x": 2022,
-            "y": 95
+            "y": 22
           },
           {
             "x": 2023,
-            "y": 130
+            "y": 24
           },
           {
             "x": 2024,
-            "y": 155
+            "y": 26
           }
         ]
       }
     ],
-    "unit": "Index (2020=100)"
+    "unit": "% of generation"
   }
 }

@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "slug": "markets-top-sectors-2024",
+    "title": "Top Performing Sectors, 2024",
+    "section": "markets",
+    "tags": [
+      "sectors",
+      "performance"
+    ],
+    "publishedAt": "2024-12-28",
+    "kind": "BAR",
+    "sources": [
+      "Market data (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "% YoY",
+        "points": [
+          {
+            "x": "Tech",
+            "y": 32
+          },
+          {
+            "x": "Energy",
+            "y": 12
+          },
+          {
+            "x": "Healthcare",
+            "y": 9
+          },
+          {
+            "x": "Financials",
+            "y": 7
+          },
+          {
+            "x": "Utilities",
+            "y": 3
+          }
+        ]
+      }
+    ],
+    "unit": "% change"
+  }
+}

@@ -1,22 +1,68 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ===== Brand colors (WCAG-conscious) ===== */
 :root {
-  --bg: #0b0b10;
-  --fg: #f4f6fb;
-  --muted: #9aa4b2;
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #6b7280;
+  --accent: #0077c8;      /* primary accent */
+  --accent-weak: #cce8ff; /* focus ring */
 }
 
-[data-theme="light"] {
-  --bg: #ffffff;
-  --fg: #0b0b10;
-  --muted: #6b7280;
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --fg: #f5f6f8;
+  --muted: #9aa0a6;
+  --accent: #3ba9ff;
+  --accent-weak: #15354b;
 }
 
 html, body, #__next { height: 100%; }
 body { background: var(--bg); color: var(--fg); }
-a { text-decoration: none; }
+
+a { text-decoration: none; color: inherit; }
+
 .container { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
-.card { border: 1px solid rgba(127,127,127,0.2); border-radius: .75rem; padding: 1rem; background: rgba(127,127,127,0.05); }
+
+.card {
+  border: 1px solid rgba(127,127,127,0.22);
+  border-radius: .75rem;
+  padding: 1rem;
+  background: rgba(127,127,127,0.05);
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+.card:hover { border-color: var(--accent); background: rgba(0,119,200,0.06); }
+
+/* Buttons/links interactions */
+a, button {
+  transition: color .2s, background .2s, border-color .2s, box-shadow .2s;
+}
+a:hover, button:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--accent-weak);
+}
+
+/* ==== Лого (переключение по data-theme) ==== */
+.site-logo {
+  display: inline-block;
+  width: 180px;
+  height: 36px;
+  line-height: 0;
+  position: relative;
+}
+
+.site-logo img {
+  display: none;           /* по умолчанию скрыты */
+  width: 180px;
+  height: 36px;
+}
+
+/* Светлая тема */
+[data-theme="light"] .site-logo .logo-light { display: block; }
+
+/* Тёмная тема */
+[data-theme="dark"] .site-logo .logo-dark { display: block; }

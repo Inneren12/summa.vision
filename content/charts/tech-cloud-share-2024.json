@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "slug": "tech-cloud-share-2024",
+    "title": "Cloud Market Share, 2024",
+    "section": "tech",
+    "tags": [
+      "cloud",
+      "iaas"
+    ],
+    "publishedAt": "2024-12-05",
+    "kind": "TREEMAP",
+    "sources": [
+      "Synergy (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Share",
+        "points": [
+          {
+            "x": "AWS",
+            "y": 31
+          },
+          {
+            "x": "Azure",
+            "y": 25
+          },
+          {
+            "x": "Google Cloud",
+            "y": 11
+          },
+          {
+            "x": "Alibaba Cloud",
+            "y": 4
+          },
+          {
+            "x": "Oracle",
+            "y": 3
+          },
+          {
+            "x": "Others",
+            "y": 26
+          }
+        ]
+      }
+    ],
+    "unit": "% share"
+  }
+}

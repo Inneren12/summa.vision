@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "slug": "geopolitics-sanctions-2024",
+    "title": "Sanctions by Target Economy, 2024",
+    "section": "geopolitics",
+    "tags": [
+      "sanctions"
+    ],
+    "publishedAt": "2024-11-14",
+    "kind": "TREEMAP",
+    "sources": [
+      "Public trackers (approx.)"
+    ]
+  },
+  "data": {
+    "series": [
+      {
+        "id": "Count",
+        "points": [
+          {
+            "x": "Russia",
+            "y": 14000
+          },
+          {
+            "x": "Iran",
+            "y": 4000
+          },
+          {
+            "x": "North Korea",
+            "y": 2000
+          },
+          {
+            "x": "Syria",
+            "y": 1500
+          },
+          {
+            "x": "Venezuela",
+            "y": 800
+          }
+        ]
+      }
+    ],
+    "unit": "sanction count"
+  }
+}
