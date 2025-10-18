@@ -1,12 +1,13 @@
-import { repo, listAllMetas } from "../../../lib/content-snapshot";
-import ChartView from "../../../components/ChartView";
-import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import ChartView from "../../../components/ChartView";
+import { listAllMetas, repo } from "../../../lib/content-snapshot";
 
 export async function generateStaticParams() {
   const metas = await listAllMetas();
-  return metas.map(m => ({ slug: m.slug }));
+  return metas.map((m) => ({ slug: m.slug }));
 }
 
 type Params = { params: { slug: string } };
@@ -23,8 +24,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: meta.title,
       description: meta.subtitle ?? undefined,
       images: [og, "/og/default.svg"],
-      type: "article"
-    }
+      type: "article",
+    },
   };
 }
 
@@ -37,12 +38,12 @@ export default async function ChartPage({ params }: Params) {
   const all = await listAllMetas();
   const tags = new Set(meta.tags ?? []);
   const related = all
-    .filter(m => m.slug !== meta.slug)
-    .map(m => ({ m, score: (m.tags ?? []).filter(t => tags.has(t)).length }))
-    .filter(x => x.score > 0)
+    .filter((m) => m.slug !== meta.slug)
+    .map((m) => ({ m, score: (m.tags ?? []).filter((t) => tags.has(t)).length }))
+    .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || (a.m.publishedAt < b.m.publishedAt ? 1 : -1))
     .slice(0, 3)
-    .map(x => x.m);
+    .map((x) => x.m);
 
   return (
     <div className="space-y-6">
@@ -61,7 +62,7 @@ export default async function ChartPage({ params }: Params) {
         <div className="space-y-3">
           <h2 className="text-xl font-semibold">Related</h2>
           <div className="grid md:grid-cols-3 gap-3">
-            {related.map(r => (
+            {related.map((r) => (
               <Link key={r.slug} href={`/charts/${r.slug}`} className="card hover:shadow">
                 <div className="text-sm uppercase opacity-70">{r.section}</div>
                 <div className="font-medium">{r.title}</div>

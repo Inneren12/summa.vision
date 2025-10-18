@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -9,9 +8,9 @@ export default {
       colors: {
         bg: "var(--bg)",
         fg: "var(--fg)",
-        muted: "var(--muted)"
-      }
-    }
+        muted: "var(--muted)",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 } satisfies Config;

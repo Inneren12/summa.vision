@@ -1,7 +1,7 @@
-
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { ChartKind, type ChartMeta, type ChartData } from "@core/models/Chart";
+
+import { type ChartData, ChartKind, type ChartMeta } from "@core/models/Chart";
 
 const CONTENT_DIR = path.resolve(process.cwd(), "../content");
 
@@ -39,16 +39,18 @@ async function readAllCharts() {
 export const repo = {
   async getChart(slug: string) {
     const items = await readAllCharts();
-    const it = items.find(x => x.meta.slug === slug);
+    const it = items.find((x) => x.meta.slug === slug);
     return it ?? null;
   },
   async listChartsBySection(section: string, limit?: number) {
     const items = await readAllCharts();
-    const filtered = items.map(x => x.meta).filter(m => m.section === section);
+    const filtered = items.map((x) => x.meta).filter((m) => m.section === section);
     filtered.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1));
     return typeof limit === "number" ? filtered.slice(0, limit) : filtered;
   },
   async listSections() {
-    return await readJSON<{ slug: string; title: string; order: number }[]>(path.join(CONTENT_DIR, "sections.json"));
-  }
+    return await readJSON<{ slug: string; title: string; order: number }[]>(
+      path.join(CONTENT_DIR, "sections.json"),
+    );
+  },
 };

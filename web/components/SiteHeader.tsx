@@ -1,7 +1,7 @@
-
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+
 import SectionNav from "./SectionNav";
+import ThemeToggle from "./ThemeToggle";
 
 export default function SiteHeader() {
   return (
@@ -36,7 +36,9 @@ export default function SiteHeader() {
         </div>
         <ThemeToggle />
       </div>
-      <div className="container pb-3"><SectionNav /></div>
+      <div className="container pb-3">
+        <SectionNav />
+      </div>
     </header>
   );
 }

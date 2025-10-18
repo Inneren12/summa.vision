@@ -1,4 +1,3 @@
-
 import { register } from "@core/charts/registry";
 import { ChartKind } from "@core/models/Chart";
 register(ChartKind.LINE, (meta, data) => ({ type: "line", props: { data } }));

@@ -1,21 +1,42 @@
-
 "use client";
 import "../lib/register-renderers";
-import { resolve } from "@core/charts/registry";
-import type { ChartMeta, ChartData, ChartSeries } from "@core/models/Chart";
-import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
-  BarChart, Bar, Treemap
-} from "recharts";
-import { useMemo } from "react";
 
-function toFlatData(series: ChartSeries[]) {
-  const xs = new Set<string | number>();
-  for (const s of series) for (const p of s.points) xs.add(p.x);
-  const flat: Record<string | number, any> = {};
-  for (const x of xs) flat[x] = { x };
-  for (const s of series) for (const p of s.points) { flat[p.x][s.id] = p.y; }
-  return Object.values(flat);
+import { resolve } from "@core/charts/registry";
+import type { ChartData, ChartMeta, ChartSeries } from "@core/models/Chart";
+import { useMemo } from "react";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  Treemap,
+  XAxis,
+  YAxis,
+} from "recharts";
+
+type FlatDataPoint = {
+  x: string | number;
+} & Record<string, number | string>;
+
+function toFlatData(series: ChartSeries[]): FlatDataPoint[] {
+  const flat = new Map<string | number, FlatDataPoint>();
+
+  for (const s of series) {
+    for (const p of s.points) {
+      const existing = flat.get(p.x);
+      if (existing) {
+        existing[s.id] = p.y;
+      } else {
+        flat.set(p.x, { x: p.x, [s.id]: p.y });
+      }
+    }
+  }
+
+  return Array.from(flat.values());
 }
 
 export default function ChartView({ meta, data }: { meta: ChartMeta; data: ChartData }) {
@@ -62,11 +83,14 @@ export default function ChartView({ meta, data }: { meta: ChartMeta; data: Chart
 
   if (type === "treemap") {
     const s0 = (props.data as ChartData).series[0];
-    const tree = { name: "root", children: s0.points.map(p => ({ name: String(p.x), size: p.y })) };
+    const tree = {
+      name: "root",
+      children: s0.points.map((p) => ({ name: String(p.x), size: p.y })),
+    };
     return (
       <div className="w-full h-[420px] card">
         <ResponsiveContainer width="100%" height="100%">
-          {/* @ts-ignore */}
+          {/* @ts-expect-error - Recharts Treemap typing does not include "size" */}
           <Treemap data={tree.children} dataKey="size" nameKey="name" />
         </ResponsiveContainer>
       </div>
