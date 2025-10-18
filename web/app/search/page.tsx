@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { search, type SearchResult } from "../../lib/search-static";
 
@@ -30,6 +30,11 @@ export default function SearchPage() {
   const q = params.get("q") ?? "";
   const section = params.get("section") ?? "";
   const tags = (params.get("tags") ?? "").split(",").filter(Boolean);
+  const tagsKey = tags.join(",");
+  const tagsForSearch = useMemo(
+    () => (tagsKey ? tagsKey.split(",") : undefined),
+    [tagsKey],
+  );
   const kind = params.get("kind") ?? "";
   const sort = (params.get("sort") as "recent" | "relevance") || "relevance";
   const page = Number(params.get("page") ?? "1");
@@ -39,13 +44,13 @@ export default function SearchPage() {
     search({
       q,
       section: section || undefined,
-      tags: tags.length ? tags : undefined,
+      tags: tagsForSearch,
       kind: kind || undefined,
       sort,
       page,
       perPage,
     }).then(setResult);
-  }, [q, section, tags.join(","), kind, sort, page]);
+  }, [q, section, tagsForSearch, kind, sort, page]);
 
   function update(name: string, value: string) {
     const next = new URLSearchParams(params);
