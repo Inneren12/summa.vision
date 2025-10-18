@@ -11,6 +11,12 @@ module.exports = {
     "simple-import-sort/exports": "warn",
     "import/order": "off",
     "import/no-unresolved": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        paths: ["react/jsx-runtime", "react/jsx-dev-runtime"],
+      },
+    ],
   },
   ignorePatterns: ["node_modules/", ".next/", "dist/", "build/", "coverage/"],
 };
