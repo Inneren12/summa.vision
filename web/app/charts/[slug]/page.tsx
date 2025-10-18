@@ -39,7 +39,7 @@ export default async function ChartPage({ params }: Params) {
   const tags = new Set(meta.tags ?? []);
   const related = all
     .filter((m) => m.slug !== meta.slug)
-    .map((m) => ({ m, score: (m.tags ?? []).filter((t) => tags.has(t)).length }))
+    .map((m) => ({ m, score: (m.tags ?? []).filter((t: string) => tags.has(t)).length }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || (a.m.publishedAt < b.m.publishedAt ? 1 : -1))
     .slice(0, 3)

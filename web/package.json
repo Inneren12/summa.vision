@@ -26,6 +26,7 @@
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "14.2.5",
+    "@types/jest": "^30.0.0",
     "@types/node": "20.14.12",
     "@types/react": "18.3.5",
     "@types/react-dom": "18.3.0",

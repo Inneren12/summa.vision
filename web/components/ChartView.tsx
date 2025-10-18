@@ -39,9 +39,14 @@ function toFlatData(series: ChartSeries[]): FlatDataPoint[] {
   return Array.from(flat.values());
 }
 
+type TreemapNode = { name: string; size: number };
+
 export default function ChartView({ meta, data }: { meta: ChartMeta; data: ChartData }) {
-  const { type, props } = resolve(meta.kind)(meta, data);
-  const flat = useMemo(() => toFlatData((props.data as ChartData).series), [props.data]);
+  const renderer = resolve(meta.kind);
+  const { type, props } = renderer(meta, data);
+  const chartData = props.data as ChartData;
+  const series: ChartSeries[] = chartData.series;
+  const flat = useMemo(() => toFlatData(series), [series]);
 
   if (type === "line") {
     return (
@@ -53,7 +58,7 @@ export default function ChartView({ meta, data }: { meta: ChartMeta; data: Chart
             <YAxis />
             <Tooltip />
             <Legend />
-            {(props.data as ChartData).series.map((s) => (
+            {series.map((s: ChartSeries) => (
               <Line key={s.id} type="monotone" dataKey={s.id} dot={false} />
             ))}
           </LineChart>
@@ -72,7 +77,7 @@ export default function ChartView({ meta, data }: { meta: ChartMeta; data: Chart
             <YAxis />
             <Tooltip />
             <Legend />
-            {(props.data as ChartData).series.map((s) => (
+            {series.map((s: ChartSeries) => (
               <Bar key={s.id} dataKey={s.id} />
             ))}
           </BarChart>
@@ -82,16 +87,12 @@ export default function ChartView({ meta, data }: { meta: ChartMeta; data: Chart
   }
 
   if (type === "treemap") {
-    const s0 = (props.data as ChartData).series[0];
-    const tree = {
-      name: "root",
-      children: s0.points.map((p) => ({ name: String(p.x), size: p.y })),
-    };
+    const s0 = series[0];
+    const tree: TreemapNode[] = s0.points.map((p) => ({ name: String(p.x), size: p.y }));
     return (
       <div className="w-full h-[420px] card">
         <ResponsiveContainer width="100%" height="100%">
-          {/* @ts-expect-error - Recharts Treemap typing does not include "size" */}
-          <Treemap data={tree.children} dataKey="size" nameKey="name" />
+          <Treemap data={tree} dataKey="size" nameKey="name" />
         </ResponsiveContainer>
       </div>
     );
