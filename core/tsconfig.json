@@ -1,17 +1,4 @@
-
 {
-  "compilerOptions": {
-    "target": "ES2021",
-    "lib": ["ES2021", "DOM"],
-    "module": "ESNext",
-    "moduleResolution": "NodeNext",
-    "strict": true,
-    "declaration": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "rootDir": "src",
-    "outDir": "dist"
-  },
-  "include": ["src"]
+  "extends": "../tsconfig.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
