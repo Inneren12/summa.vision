@@ -7,7 +7,7 @@
   --bg: #ffffff;
   --fg: #0a0a0a;
   --muted: #6b7280;
-  --accent: #0077c8;      /* primary accent */
+  --accent: #0077c8; /* primary accent */
   --accent-weak: #cce8ff; /* focus ring */
 }
 
@@ -19,28 +19,57 @@
   --accent-weak: #15354b;
 }
 
-html, body, #__next { height: 100%; }
-body { background: var(--bg); color: var(--fg); }
+html,
+body,
+#__next {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
 
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.container { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 .card {
-  border: 1px solid rgba(127,127,127,0.22);
-  border-radius: .75rem;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-radius: 0.75rem;
   padding: 1rem;
-  background: rgba(127,127,127,0.05);
-  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+  background: rgba(127, 127, 127, 0.05);
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
-.card:hover { border-color: var(--accent); background: rgba(0,119,200,0.06); }
+.card:hover {
+  border-color: var(--accent);
+  background: rgba(0, 119, 200, 0.06);
+}
 
 /* Buttons/links interactions */
-a, button {
-  transition: color .2s, background .2s, border-color .2s, box-shadow .2s;
+a,
+button {
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
-a:hover, button:hover { color: var(--accent); }
-a:focus-visible, button:focus-visible {
+a:hover,
+button:hover {
+  color: var(--accent);
+}
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   box-shadow: 0 0 0 2px var(--accent-weak);
@@ -56,13 +85,17 @@ a:focus-visible, button:focus-visible {
 }
 
 .site-logo img {
-  display: none;           /* по умолчанию скрыты */
+  display: none; /* по умолчанию скрыты */
   width: 180px;
   height: 36px;
 }
 
 /* Светлая тема */
-[data-theme="light"] .site-logo .logo-light { display: block; }
+[data-theme="light"] .site-logo .logo-light {
+  display: block;
+}
 
 /* Тёмная тема */
-[data-theme="dark"] .site-logo .logo-dark { display: block; }
+[data-theme="dark"] .site-logo .logo-dark {
+  display: block;
+}

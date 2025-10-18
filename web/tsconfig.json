@@ -1,24 +1,16 @@
 {
   "compilerOptions": {
     "target": "ES2021",
-    "lib": [
-      "ES2021",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "preserve",
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@core/*": [
-        "../core/src/*"
-      ]
+      "@core/*": ["../core/src/*"]
     },
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "allowJs": true,
     "skipLibCheck": true,
     "noEmit": true,
@@ -32,12 +24,6 @@
       }
     ]
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }

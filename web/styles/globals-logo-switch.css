@@ -1,8 +1,23 @@
-
 /* === Logo switching based on data-theme === */
-.site-logo { display:inline-block; width:180px; height:36px; line-height:0; position:relative; }
-.site-logo img { display:block; width:180px; height:36px; }
-.site-logo .logo-dark { display:none; }
+.site-logo {
+  display: inline-block;
+  width: 180px;
+  height: 36px;
+  line-height: 0;
+  position: relative;
+}
+.site-logo img {
+  display: block;
+  width: 180px;
+  height: 36px;
+}
+.site-logo .logo-dark {
+  display: none;
+}
 
-[data-theme="dark"] .site-logo .logo-dark { display:block; }
-[data-theme="dark"] .site-logo .logo-light { display:none; }
+[data-theme="dark"] .site-logo .logo-dark {
+  display: block;
+}
+[data-theme="dark"] .site-logo .logo-light {
+  display: none;
+}

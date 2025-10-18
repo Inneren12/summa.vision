@@ -1,8 +1,9 @@
-
 import "../styles/globals.css";
+
 import { ReactNode } from "react";
-import SiteHeader from "../components/SiteHeader";
+
 import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 export const metadata = {
   metadataBase: new URL("https://summa.vision"),
@@ -11,11 +12,11 @@ export const metadata = {
   openGraph: {
     title: "summa.vision",
     description: "Static charts & sections",
-    images: ["/logo.png"]
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/favicon.png"
-  }
+    icon: "/favicon.png",
+  },
 };
 
 function ThemeScript() {
@@ -27,13 +28,15 @@ function ThemeScript() {
       document.documentElement.setAttribute('data-theme', t);
     }catch(e){}
   })();`;
-  return <script dangerouslySetInnerHTML={{__html: code}} />;
+  return <script dangerouslySetInnerHTML={{ __html: code }} />;
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head><ThemeScript /></head>
+      <head>
+        <ThemeScript />
+      </head>
       <body>
         <SiteHeader />
         <main className="container py-6">{children}</main>
