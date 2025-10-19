@@ -23,6 +23,6 @@
     "build"
   ],
   "compilerOptions": {
-    "types": ["node"]        // возвращаем node-типизацию (process, fs, path)
+    "types": ["node"]     
   }
 }
