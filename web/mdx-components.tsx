@@ -1,25 +1,50 @@
-"use client";
+import type { MDXComponents } from "mdx/types";
+import type { ReactNode } from "react";
 
-import type { ComponentPropsWithoutRef, ReactElement } from "react";
+type ComponentsInput =
+  | MDXComponents
+  | ((current: MDXComponents) => MDXComponents)
+  | null
+  | undefined;
 
-type MDXComponent = (props: Record<string, unknown>) => ReactElement;
-type MDXComponents = Record<string, MDXComponent>;
+const DEFAULT_COMPONENTS: MDXComponents = {
+  h1: (props) => <h1 className="text-3xl font-semibold mt-6 mb-4" {...props} />,
+  h2: (props) => <h2 className="text-2xl font-semibold mt-6 mb-3" {...props} />,
+  p: (props) => <p className="my-3 leading-7 opacity-90" {...props} />,
+};
 
-type Heading1Props = ComponentPropsWithoutRef<"h1">;
-type Heading2Props = ComponentPropsWithoutRef<"h2">;
-type ParagraphProps = ComponentPropsWithoutRef<"p">;
+const stack: MDXComponents[] = [DEFAULT_COMPONENTS];
 
-export function useMDXComponents(components: MDXComponents = {}): MDXComponents {
-  return {
-    h1: ((props: Heading1Props) => (
-      <h1 className="text-3xl font-semibold mt-6 mb-4" {...props} />
-    )) as MDXComponent,
-    h2: ((props: Heading2Props) => (
-      <h2 className="text-2xl font-semibold mt-6 mb-3" {...props} />
-    )) as MDXComponent,
-    p: ((props: ParagraphProps) => (
-      <p className="my-3 leading-7 opacity-90" {...props} />
-    )) as MDXComponent,
-    ...components,
-  };
+function mergeComponents(base: MDXComponents, components?: ComponentsInput): MDXComponents {
+  if (typeof components === "function") {
+    return components(base);
+  }
+  if (components) {
+    return { ...base, ...components };
+  }
+  return base;
+}
+
+export function useMDXComponents(components?: ComponentsInput): MDXComponents {
+  const current = stack[stack.length - 1] ?? DEFAULT_COMPONENTS;
+  return mergeComponents(current, components);
+}
+
+export function MDXProvider({
+  components,
+  disableParentContext,
+  children,
+}: {
+  components?: ComponentsInput;
+  disableParentContext?: boolean | null;
+  children?: ReactNode;
+}) {
+  const parent = disableParentContext ? DEFAULT_COMPONENTS : stack[stack.length - 1];
+  const value = mergeComponents(parent ?? DEFAULT_COMPONENTS, components);
+  stack.push(value);
+  try {
+    return children ?? null;
+  } finally {
+    stack.pop();
+  }
 }

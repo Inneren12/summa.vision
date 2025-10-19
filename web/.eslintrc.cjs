@@ -14,16 +14,7 @@ module.exports = {
     "no-restricted-imports": [
       "error",
       {
-        paths: [
-          {
-            name: "react/jsx-runtime",
-            message: "Import from 'react' instead of 'react/jsx-runtime'.",
-          },
-          {
-            name: "react/jsx-dev-runtime",
-            message: "Import from 'react' instead of 'react/jsx-dev-runtime'.",
-          },
-        ],
+        paths: ["react/jsx-runtime", "react/jsx-dev-runtime"],
       },
     ],
   },
