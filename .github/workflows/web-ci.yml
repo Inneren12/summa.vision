@@ -43,4 +43,4 @@ jobs:
       # (опционально) строгая проверка типов на всём репо,
       # даже если typescript не в web/package.json:
       - name: Type check (root strict)
-        run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.build.json --noEmit
+        run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.json --noEmit
