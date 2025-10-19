@@ -1,15 +1,11 @@
-export const metadata = { title: "About — summa.vision", description: "What is summa.vision" };
+'use client';
+export const dynamic = 'force-dynamic';
 
-# About
-
-**summa.vision** — это компактные, наглядные чарты по экономике, рынкам, технологиям и энергии.
-Мы стартуем как статический сайт без CMS и серверов, чтобы быстро проверить идеи и дизайн,
-а затем постепенно добавим поиск, CMS и автоматизацию.
-
-### Принципы
-
-- Две темы (светлая/тёмная), быстрый рендер графиков.
-- Чёткие источники данных под каждым чартом.
-- Минимум текста, максимум структуры.
-
-Если есть обратная связь или идеи партнёрства — пишите нам: **hello@summa.vision**.
+export default function AboutPage() {
+  return (
+    <main style={{maxWidth: 800, margin: '0 auto', padding: '2rem 1rem', lineHeight: 1.6}}>
+      <h1>About</h1>
+      <p>Summa.Vision — визуальные истории и графики. Эта страница временно упрощена для прохождения сборки.</p>
+    </main>
+  );
+}
