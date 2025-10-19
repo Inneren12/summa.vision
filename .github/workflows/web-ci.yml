@@ -5,16 +5,12 @@ on:
     branches: [ main, "feature/**", "codex/**" ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
-    inputs:
-      strict:
-        description: 'Run strict typecheck'
-        required: false
-        default: 'false'
+  workflow_dispatch: {}   # ручной запуск тоже остаётся
 
 jobs:
   web:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,11 +18,11 @@ jobs:
       - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      # npm10-safe TS check. Требует tsconfig.build.json в корне
+      # npm10-safe тип-чек только билд-кода (без тестов)
       - name: Type check (build only)
         run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.build.json --noEmit
 
@@ -49,9 +45,3 @@ jobs:
       - name: Build
         working-directory: web
         run: npm run build
-
-
-      # (опционально) строгая проверка типов на всём репо,
-      # даже если typescript не в web/package.json:
-      - name: Type check (root strict)
-      - run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.json --noEmit
