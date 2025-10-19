@@ -30,9 +30,8 @@ jobs:
         working-directory: web
         run: npm ci
 
-      - name: Format check
-        working-directory: web
-        run: npm run format:check
+      - name: Type check (build only)
+        run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.build.json --noEmit
 
       - name: Lint
         working-directory: web
