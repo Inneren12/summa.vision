@@ -3,25 +3,34 @@ export const metadata = {
   description: "What is summa.vision",
 };
 
+const principles = [
+  "Две темы (светлая/тёмная), быстрый рендер графиков.",
+  "Чёткие источники данных под каждым чартом.",
+  "Минимум текста, максимум структуры.",
+];
+
 export default function AboutPage() {
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none">
-      <h1>About</h1>
-      <p>
+    <div className="space-y-4">
+      <h1 className="text-3xl font-semibold mt-6 mb-4">About</h1>
+      <p className="my-3 leading-7 opacity-90">
         <strong>summa.vision</strong> — это компактные, наглядные чарты по экономике, рынкам,
-        технологиям и энергии. Мы стартуем как статический сайт без CMS и серверов, чтобы быстро
-        проверить идеи и дизайн, а затем постепенно добавим поиск, CMS и автоматизацию.
+        технологиям и энергии.
       </p>
-      <h3>Принципы</h3>
-      <ul>
-        <li>Две темы (светлая/тёмная), быстрый рендер графиков.</li>
-        <li>Чёткие источники данных под каждым чартом.</li>
-        <li>Минимум текста, максимум структуры.</li>
+      <p className="my-3 leading-7 opacity-90">
+        Мы стартуем как статический сайт без CMS и серверов, чтобы быстро проверить идеи и дизайн, а
+        затем постепенно добавим поиск, CMS и автоматизацию.
+      </p>
+      <h3 className="text-xl font-semibold mt-6 mb-3">Принципы</h3>
+      <ul className="list-disc space-y-2 pl-6">
+        {principles.map((principle) => (
+          <li key={principle}>{principle}</li>
+        ))}
       </ul>
-      <p>
-        {"Если есть обратная связь или идеи партнёрства — пишите нам: "}
-        <strong>hello@summa.vision</strong>.
+      <p className="my-3 leading-7 opacity-90">
+        Если есть обратная связь или идеи партнёрства — пишите нам:
+        <strong className="ml-1">hello@summa.vision</strong>.
       </p>
-    </article>
+    </div>
   );
 }
