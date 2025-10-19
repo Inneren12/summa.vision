@@ -1,6 +1,11 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["web/**/*.ts", "web/**/*.tsx", "core/**/*.ts", "core/**/*.tsx"],
+  "include": [
+    "web/**/*.ts",
+    "web/**/*.tsx",
+    "core/**/*.ts",
+    "core/**/*.tsx"
+  ],
   "exclude": [
     "**/__tests__/**",
     "**/*.test.*",
@@ -12,5 +17,7 @@
     "dist",
     "build"
   ],
-  "compilerOptions": { "types": [] }
+  "compilerOptions": {
+    "types": []
+  }
 }
