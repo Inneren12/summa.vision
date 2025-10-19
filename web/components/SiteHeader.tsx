@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import SectionNav from "./SectionNav";
@@ -9,22 +10,21 @@ export default function SiteHeader() {
       <div className="container py-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <Link href="/" className="site-logo" aria-label="summa.vision — home">
-            <img
+            <Image
               src="/logo-light.png"
               width={180}
               height={36}
-              alt="summa.vision"
+              alt="Summa.Vision"
               className="logo-light"
-              loading="eager"
+              priority
             />
-            <img
+            <Image
               src="/logo-dark.png"
               width={180}
               height={36}
               alt=""
               aria-hidden="true"
               className="logo-dark"
-              loading="eager"
             />
           </Link>
           <nav className="hidden md:flex items-center gap-4 text-sm opacity-90">
