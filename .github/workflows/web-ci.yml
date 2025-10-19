@@ -5,11 +5,19 @@ on:
     branches: [ main, "feature/**", "codex/**" ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch: {}   # ручной запуск тоже остаётся
+  workflow_dispatch: {}
+
+concurrency:
+  group: web-ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   web:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: web
 
     steps:
       - name: Checkout
@@ -22,25 +30,21 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      # npm10-safe тип-чек только билд-кода (без тестов)
-      - name: Type check (build only)
-        run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.build.json --noEmit
-
       - name: Install deps
-        working-directory: web
         run: npm ci
 
+      # npm10-safe TS check, запускаем внутри web/ и по web/tsconfig.build.json
       - name: Type check (build only)
         run: npx --yes -p typescript@5.6.3 tsc -p tsconfig.build.json --noEmit
 
+      - name: Format check
+        run: npm run format:check
+
       - name: Lint
-        working-directory: web
         run: npm run lint
 
       - name: Test
-        working-directory: web
         run: npm test -- --ci
 
       - name: Build
-        working-directory: web
         run: npm run build
