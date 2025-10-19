@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "include": [
+    "web/next-env.d.ts",
+    "web/**/*.d.ts",
     "web/**/*.ts",
     "web/**/*.tsx",
     "core/**/*.ts",
@@ -12,12 +14,15 @@
     "**/*.spec.*",
     "web/jest.config.*",
     "web/jest.setup.*",
+    "web/tailwind.config.*",
+    "web/next.config.*",
+    "web/postcss.config.*",
     "node_modules",
     ".next",
     "dist",
     "build"
   ],
   "compilerOptions": {
-    "types": []
+    "types": ["node"]        // возвращаем node-типизацию (process, fs, path)
   }
 }
